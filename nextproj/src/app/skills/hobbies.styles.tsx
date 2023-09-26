@@ -28,13 +28,14 @@ export const StyledSection = styled.section`
   align-self: stretch;
   border-radius: 1.875rem;
   background: #11011B;
+  width: fit-content;
 `
 export const StyledH2 = styled.h2`
-color: #D7D7D7;
-font-size: 1rem;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-margin-block-start: 0;
-margin-block-end: 0;
+  color: #D7D7D7;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-block-start: 0;
+  margin-block-end: 0;
 `

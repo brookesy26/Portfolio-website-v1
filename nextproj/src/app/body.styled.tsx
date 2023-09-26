@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledBody = styled.body`
   display: flex;
-  padding: 0 1rem 3rem 1rem;
+  padding: 0 1rem 5rem 1rem;
   flex-direction: column;
   align-items: flex-start;
   background: #0F0F0F;
