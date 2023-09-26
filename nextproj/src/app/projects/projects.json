@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Weather",
+    "text": "Displays real time weather information utilising the Restful API provided by openweathermap.org.",
+    "features": [
+      "current real time readings",
+      "The next 24 hour weather",
+      "The next 5 days forecast"
+    ],
+    "technology": [
+      "Html",
+      "Sass",
+      "React"
+    ],
+    "URL": "https://roaring-beijinho-c53ffc.netlify.app"
+  },
+  {
+    "title": "Stop Watch",
+    "text": "Displays real time weather information utilising the Restful API provided by openweathermap.org.",
+    "features": [
+      "current real time readings",
+      "The next 24 hour weather",
+      "The next 5 days forecast"
+    ],
+    "technology": [
+      "Html",
+      "Css",
+      "React"
+    ],
+    "URL": "https://roaring-beijinho-c53ffc.netlify.app"
+  },
+  {
+    "title": "To Do List",
+    "text": "Displays real time weather information utilising the Restful API provided by openweathermap.org.",
+    "features": [
+      "current real time readings",
+      "The next 24 hour weather",
+      "The next 5 days forecast"
+    ],
+    "technology": [
+      "Html",
+      "Css",
+      "React"
+    ],
+    "URL": "https://roaring-beijinho-c53ffc.netlify.app"
+  }
+]

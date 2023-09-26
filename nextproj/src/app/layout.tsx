@@ -1,8 +1,17 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+'use client'
 
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next'
+import Heading from './heading'
+import NavBar from './navigation'
+import StyledComponentsRegistry from './lib/registry'
+import "./global.css"
+import { Roboto  } from 'next/font/google'
+import {StyledBody} from "./body.styled"
+const roboto = Roboto({
+  weight: ['400','500','700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'My Portfolio',
@@ -15,8 +24,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={roboto.className}>  
+        <StyledComponentsRegistry>
+          <StyledBody>
+            <Heading />
+            {children}
+            <NavBar />
+          </StyledBody>
+        </StyledComponentsRegistry>
     </html>
   )
 }

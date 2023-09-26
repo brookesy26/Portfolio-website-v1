@@ -1,5 +1,11 @@
-import './page.module.css'
+import Heading from './heading'
+import NavBar from './navigation'
+import PageSelector from './pageSelector'
 
 export default function Home() {
-  return (<h1>Coming Soon...</h1>)
+  return (
+    <>
+      <PageSelector page={'home'} />
+    </>
+  )
 }
