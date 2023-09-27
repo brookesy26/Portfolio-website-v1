@@ -19,8 +19,8 @@
     "text": "React based Stop Watch, utilising timing functions to track precise time.",
     "features": [
       "Start, Pause, and Reset",
-      "Lap - Lists current tracked time",
-      "Tracks minutes, Seconds, and milliseconds"
+      "List lap times",
+      "Tracks minutes, seconds, & milliseconds"
     ],
     "technology": [
       "Html",

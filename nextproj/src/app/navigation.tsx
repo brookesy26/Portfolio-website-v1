@@ -5,10 +5,6 @@ import Link from "next/link"
 import { Icon } from '@iconify/react'; 
 import { useState } from "react";
 
-type PageType = {
-  $location: string;
-}
-
 const StyledNav = styled.nav`
 //position
 position: fixed;
@@ -52,45 +48,59 @@ const AnimatedNav = styled(StyledNav)<PageType>`
   transition: left 0.3s ease;
 }
 `
-
 const StyledIcon = styled(Icon)<VariantType>`
   color: ${(props) => props.$variant ? '#FF006B ' : '#FFFFFF'};
   transition: color 0.3s ease;
+  position: relative;
 `
+type PageType = {
+  $location: string;
+}
 type VariantType = {
   $variant: Boolean;
 }
-
 interface MyComponentProps {
   page: string;
   setPage: (page: string) => void;
 }
+
 const NavBar = (props : MyComponentProps) => {
+
   const {page, setPage } = props;
+  const [homeState, setHomeState] = useState(true)
+  const [projectState, setProjectState] = useState(false)
+  const [skillsState, setSkillsState] = useState(false)
 
-const [homeState, setHomeState] = useState(true)
-const [projectState, setProjectState] = useState(false)
-const [skillsState, setSkillsState] = useState(false)
-
-function handleHomeClick(){
-  setHomeState(true)
-  setProjectState(false)
-  setSkillsState(false)
-  setPage('home')
-}
-function handleProjectClick(){
-  setProjectState(true)
-  setHomeState(false)
-  setSkillsState(false)
-  setPage('project')
-}
-function handleSkillsClick(){
-  setSkillsState(true)
-  setHomeState(false)
-  setProjectState(false)
-  setPage('skill')
-}
-
+  function handleHomeClick(){
+    setHomeState(true)
+    setProjectState(false)
+    setSkillsState(false)
+    setPage('home')
+    window.scroll({
+      top: 0,  
+      behavior: 'smooth'
+    });
+  }
+  function handleProjectClick(){
+    setProjectState(true)
+    setHomeState(false)
+    setSkillsState(false)
+    setPage('project')
+    window.scroll({
+      top: 0,  
+      behavior: 'smooth'
+    });
+  }
+  function handleSkillsClick(){
+    setSkillsState(true)
+    setHomeState(false)
+    setProjectState(false)
+    setPage('skill')
+    window.scroll({
+      top: 0,  
+      behavior: 'smooth'
+    });
+  }
   return (
     <AnimatedNav $location={page}>
         <StyledIcon icon="fluent:apps-24-filled" width="28" height="28" $variant={projectState} onClick={handleProjectClick}/>
