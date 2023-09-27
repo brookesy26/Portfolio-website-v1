@@ -52,9 +52,7 @@ const AnimatedNav = styled(StyledNav)<PageType>`
   transition: left 0.3s ease;
 }
 `
-const StyledLink = styled(Link)`
-color: white;
-`
+
 const StyledIcon = styled(Icon)<VariantType>`
   color: ${(props) => props.$variant ? '#FF006B ' : '#FFFFFF'};
   transition: color 0.3s ease;
@@ -95,17 +93,9 @@ function handleSkillsClick(){
 
   return (
     <AnimatedNav $location={page}>
-      <StyledLink href="">
         <StyledIcon icon="fluent:apps-24-filled" width="28" height="28" $variant={projectState} onClick={handleProjectClick}/>
-        </StyledLink>
-
-      <StyledLink href="">
         <StyledIcon icon="fluent:person-24-regular" width="32" height="32"  $variant={homeState} onClick={handleHomeClick}/>
-        </StyledLink>
-        
-      <StyledLink href="" >
         <StyledIcon icon="uil:graph-bar" width="28" height="28" name="skills" $variant={skillsState} onClick={handleSkillsClick}/>
-        </StyledLink>
     </AnimatedNav>
   )
 }
