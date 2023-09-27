@@ -21,7 +21,9 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
     <html lang="en" className={roboto.className}>  
       <BodyStyled>
         <Heading/>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          {children}
+          </StyledComponentsRegistry>
         <NavBar/>
       </BodyStyled>
     </html>
