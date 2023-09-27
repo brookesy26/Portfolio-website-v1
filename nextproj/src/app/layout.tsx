@@ -1,12 +1,10 @@
-'use client'
-
 import type { Metadata } from 'next'
-import Heading from './heading'
-import NavBar from './navigation'
+import { Roboto  } from 'next/font/google'
 import StyledComponentsRegistry from './lib/registry'
 import "./global.css"
-import { Roboto  } from 'next/font/google'
-import {StyledBody} from "./body.styled"
+import Heading from './heading'
+import NavBar from './navigation'
+import BodyStyled from './bodyComponent'
 const roboto = Roboto({
   weight: ['400','500','700', '900'],
   subsets: ['latin'],
@@ -14,24 +12,18 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'My Portfolio',
+  title: 'Portfolio',
   description: 'Personal Web Development Portfolio',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({children,}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={roboto.className}>  
-        <StyledComponentsRegistry>
-          <StyledBody>
-            <Heading />
-            {children}
-            <NavBar />
-          </StyledBody>
-        </StyledComponentsRegistry>
+      <BodyStyled>
+        <Heading/>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <NavBar/>
+      </BodyStyled>
     </html>
   )
 }

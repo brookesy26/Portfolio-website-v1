@@ -2,12 +2,7 @@
 const nextConfig = {}
 
 module.exports = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-    ],
-  },
+  compiler: {
+    styledComponents: true
+  }
 }

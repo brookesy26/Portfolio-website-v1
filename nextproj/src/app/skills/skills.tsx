@@ -1,4 +1,3 @@
-"use client"
 import stuffIDo from "./skills.json"
 import {StyledLi, StyledUL, StyledSection, StyledH2} from "./hobbies.styles"
 

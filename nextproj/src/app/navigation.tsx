@@ -1,9 +1,10 @@
 'use client'
+
 import styled from "styled-components"
 import Link from "next/link"
-import { Icon } from '@iconify-icon/react';
+import { Icon } from '@iconify/react';
 
-export const StyledNav = styled.nav`
+const StyledNav = styled.nav`
 //position
 position: fixed;
 bottom: 30px;
@@ -21,18 +22,25 @@ border-radius: 1.875rem;
 border: 1px solid #665CD9;
 background: #0F0F0F;
 `
-export const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
 color: white;
 `
-
 
 const NavBar = () => {
 
   return (
     <StyledNav>
-      <StyledLink href="projects"><Icon icon="fluent:apps-24-filled" width="28" height="28" /></StyledLink>
-      <StyledLink href="home"><Icon icon="fluent:person-24-regular" width="32" height="32"/></StyledLink>
-      <StyledLink href="skills" ><Icon icon="uil:graph-bar" width="28" height="28"/></StyledLink>
+      <StyledLink href="projects">
+        <Icon icon="fluent:apps-24-filled" width="28" height="28" />
+        </StyledLink>
+
+      <StyledLink href="/">
+        <Icon icon="fluent:person-24-regular" width="32" height="32"/>
+        </StyledLink>
+        
+      <StyledLink href="skills" >
+        <Icon icon="uil:graph-bar" width="28" height="28"/>
+        </StyledLink>
     </StyledNav>
   )
 }

@@ -1,11 +1,15 @@
-import Heading from './heading'
-import NavBar from './navigation'
-import PageSelector from './pageSelector'
+
+import Background from "./background"
+import Contact from "./contact"
+import MainWrapper from "./mainComponent"
 
 export default function Home() {
-  return (
-    <>
-      <PageSelector page={'home'} />
-    </>
+  return ( 
+  <>
+  <MainWrapper>
+    <Background />
+    <Contact />
+  </MainWrapper>
+  </>
   )
 }

@@ -1,4 +1,5 @@
 "use client"
+
 import jsonData from "./projects.json"
 import styled from "styled-components"
 
@@ -12,6 +13,10 @@ const StyledSection = styled.section`
   border-radius: 1.875rem;
   background: #11011B;
   width: fit-content;
+  @media(min-width: 800px){
+    grid-column: 2/3;
+    width: fit-content;
+  }
 `
 const StyledH2 = styled.h2`
   color: #D7D7D7;
@@ -51,16 +56,18 @@ const StyledUL = styled.ul`
 export default function Projects() {
   return (
     jsonData.map((project, i) => (
-      <StyledSection key={project.title}>
-        <StyledH2 key={project.title}>{project.title}</StyledH2>
-        <StyledText key={i}>{project.text}</StyledText>
-        <StyledUL key={project.title}>
-          <StyledText>Features:</StyledText>
+      <StyledSection key={`Section - ${i}`}>
+        <StyledH2 key={`h2 - ${i}`}>{project.title}</StyledH2>
+        <StyledText key={`text - ${i}`}>{project.text}</StyledText>
+        <StyledUL key={`UL - ${i}`}>
+          <StyledText key={`features-text - ${i}`}>Features:</StyledText>
           {project.features.map((feature, ii) => (
-            <StyledLi key={ii}>{feature}</StyledLi>
+            <StyledLi key={`feature - ${ii}`}>{feature}</StyledLi>
           ))}
         </StyledUL>
-        <StyledText>Test it out <a href={project.URL}>here</a></StyledText>
+        <StyledText key={`Href-text - ${i}`}>Test it out <a href={project.URL}>here</a></StyledText>
       </StyledSection>
-    )))
+    ))
+    )
+   
 }

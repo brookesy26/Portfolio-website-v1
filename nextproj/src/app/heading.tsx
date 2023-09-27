@@ -34,6 +34,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
+  @media(min-width: 800px){
+    grid-column: 2/3;
+  }
 `
 const Heading = () => {
   return (

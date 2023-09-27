@@ -29,6 +29,10 @@ export const StyledSection = styled.section`
   border-radius: 1.875rem;
   background: #11011B;
   width: fit-content;
+  @media(min-width: 800px){
+    grid-column: 2/3;
+    width: fit-content;
+  }
 `
 export const StyledH2 = styled.h2`
   color: #D7D7D7;
