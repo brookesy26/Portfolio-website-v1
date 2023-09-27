@@ -4,7 +4,7 @@ body::-webkit-scrollbar{
 
 body{
   display: flex;
-  padding: 0 1rem 5rem 1rem;
+  padding: 0 1rem 7.5rem 1rem;
   flex-direction: column;
   align-items: flex-start;
   background: #0F0F0F;

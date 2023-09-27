@@ -1,16 +1,20 @@
-
-import Background from "./background"
-import Contact from "./contact"
-import MainWrapper from "./mainComponent"
+"use client"
+import PageSelector from "./pageSelector"
+import Heading from "./heading"
 import NavBar from "./navigation"
+import { useState } from "react"
+
 export default function Home() {
+  const [page, setPage] = useState<string>('home')
+
+  // type status = 'home' | 'project' | 'skill'
+  
+
   return ( 
   <>
-  <MainWrapper>
-    <Background />
-    <Contact />
-  </MainWrapper>
-  <NavBar/>
+  <Heading/>
+  <PageSelector page={page}/>
+  <NavBar setPage={setPage} page={page}/>
   </>
   )
 }

@@ -52,9 +52,7 @@ const AnimatedNav = styled(StyledNav)<PageType>`
   transition: left 0.3s ease;
 }
 `
-const StyledLink = styled(Link)`
-color: white;
-`
+
 const StyledIcon = styled(Icon)<VariantType>`
   color: ${(props) => props.$variant ? '#FF006B ' : '#FFFFFF'};
   transition: color 0.3s ease;
@@ -63,11 +61,16 @@ type VariantType = {
   $variant: Boolean;
 }
 
-const NavBar = () => {
+interface MyComponentProps {
+  page: string;
+  setPage: (page: string) => void;
+}
+const NavBar = (props : MyComponentProps) => {
+  const {page, setPage } = props;
+
 const [homeState, setHomeState] = useState(true)
 const [projectState, setProjectState] = useState(false)
 const [skillsState, setSkillsState] = useState(false)
-const [page, setPage] = useState('home')
 
 function handleHomeClick(){
   setHomeState(true)
@@ -90,17 +93,9 @@ function handleSkillsClick(){
 
   return (
     <AnimatedNav $location={page}>
-      <StyledLink href="projects">
         <StyledIcon icon="fluent:apps-24-filled" width="28" height="28" $variant={projectState} onClick={handleProjectClick}/>
-        </StyledLink>
-
-      <StyledLink href="/">
         <StyledIcon icon="fluent:person-24-regular" width="32" height="32"  $variant={homeState} onClick={handleHomeClick}/>
-        </StyledLink>
-        
-      <StyledLink href="skills" >
         <StyledIcon icon="uil:graph-bar" width="28" height="28" name="skills" $variant={skillsState} onClick={handleSkillsClick}/>
-        </StyledLink>
     </AnimatedNav>
   )
 }
