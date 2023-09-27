@@ -2,7 +2,6 @@
 
 import jsonData from "./projects.json"
 import styled from "styled-components"
-import NavBar from "../navigation"
 
 const StyledSection = styled.section`
   display: flex;
@@ -55,8 +54,8 @@ const StyledUL = styled.ul`
   margin-block-end: 0;
 `
 export default function Projects() {
-  return (<>
-    {jsonData.map((project, i) => (
+  return (
+    jsonData.map((project, i) => (
       <StyledSection key={`Section - ${i}`}>
         <StyledH2 key={`h2 - ${i}`}>{project.title}</StyledH2>
         <StyledText key={`text - ${i}`}>{project.text}</StyledText>
@@ -68,8 +67,7 @@ export default function Projects() {
         </StyledUL>
         <StyledText key={`Href-text - ${i}`}>Test it out <a href={project.URL}>here</a></StyledText>
       </StyledSection>
-    ))}
-    <NavBar/>
-    </>
+    ))
     )
+   
 }
