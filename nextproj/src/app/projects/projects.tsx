@@ -34,6 +34,10 @@ const StyledText = styled.p`
   font-size: 1rem;
   font-weight: 400;
 `
+const FeaturesText = styled(StyledText)`
+  width: 100%;
+`
+
 const StyledLi = styled.li`
   background-color: #2C183C;
   display: inline-block;
@@ -53,6 +57,14 @@ const StyledUL = styled.ul`
   margin-block-start: 0;
   margin-block-end: 0;
 `
+const TechLI = styled(StyledLi)`
+  font-size: 0.8rem;
+`
+
+const TechUL = styled(StyledUL)`
+  justify-content: flex-end;
+`
+
 export default function Projects() {
   return (
     jsonData.map((project, i) => (
@@ -60,12 +72,17 @@ export default function Projects() {
         <StyledH2 key={`h2 - ${i}`}>{project.title}</StyledH2>
         <StyledText key={`text - ${i}`}>{project.text}</StyledText>
         <StyledUL key={`UL - ${i}`}>
-          <StyledText key={`features-text - ${i}`}>Features:</StyledText>
+          <FeaturesText key={`features-text - ${i}`}>Features:</FeaturesText>
           {project.features.map((feature, ii) => (
             <StyledLi key={`feature - ${ii}`}>{feature}</StyledLi>
           ))}
         </StyledUL>
         <StyledText key={`Href-text - ${i}`}>Test it out <a href={project.URL}>here</a></StyledText>
+        <TechUL key={`Ul - ${i}${i}`}>
+        {project.technology.map((tech, jj) => (
+          <TechLI key={`tech - ${jj}`}>{tech}</TechLI>
+        ))}
+        </TechUL>
       </StyledSection>
     ))
     )

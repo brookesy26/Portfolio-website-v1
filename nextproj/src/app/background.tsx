@@ -29,12 +29,15 @@ const StyledText = styled.p`
   font-size: 1rem;
   font-weight: 400;
 `
+const Sspan = styled.span`
+  color: #634AFF;
+`
 
 const Background = () => {
   return (
     <StyledSection>
       <StyledH2>Background</StyledH2>
-      <StyledText>Hi, I&apos;ve recently left a career as an ICT technician to follow my passion as a frontend developer. </StyledText>
+      <StyledText><Sspan>Hi,</Sspan> recently I left a career as an ICT technician to follow my passion as a frontend developer. </StyledText>
       <StyledText>Currently studying a Web Design and Development degree set to graduate early 2024.</StyledText>
       <StyledText>Please browse my portfolio and feel free to get in touch.</StyledText>
     </StyledSection>
