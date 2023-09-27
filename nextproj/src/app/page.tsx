@@ -1,5 +1,15 @@
-import './page.module.css'
+
+import Background from "./background"
+import Contact from "./contact"
+import MainWrapper from "./mainComponent"
 
 export default function Home() {
-  return (<h1>Coming Soon...</h1>)
+  return ( 
+  <>
+  <MainWrapper>
+    <Background />
+    <Contact />
+  </MainWrapper>
+  </>
+  )
 }

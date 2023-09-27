@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Weather",
+    "text": "Displays real time weather information utilising the Restful API provided by openweathermap.org.",
+    "features": [
+      "current real time readings",
+      "The next 24 hour weather",
+      "The next 5 days forecast"
+    ],
+    "technology": [
+      "Html",
+      "Sass",
+      "React"
+    ],
+    "URL": "https://roaring-beijinho-c53ffc.netlify.app"
+  },
+  {
+    "title": "Stop Watch",
+    "text": "React based Stop Watch, utilising timing functions to track precise time.",
+    "features": [
+      "Start, Pause, and Reset",
+      "Lap - Lists current tracked time",
+      "Tracks minutes, Seconds, and milliseconds"
+    ],
+    "technology": [
+      "Html",
+      "Css",
+      "React"
+    ],
+    "URL": "https://cozy-kelpie-770bc9.netlify.app/"
+  },
+  {
+    "title": "To Do List",
+    "text": "React based Stop Watch, utilising timing functions to track precise time.",
+    "features": [
+      "Typeable list items",
+      "Edit and Delete item",
+      "Check off completed items"
+    ],
+    "technology": [
+      "Html",
+      "Css",
+      "React"
+    ],
+    "URL": "https://luminous-cuchufli-17e362.netlify.app/"
+  }
+]
