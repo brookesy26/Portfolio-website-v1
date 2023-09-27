@@ -2,7 +2,7 @@
 import Background from "./background"
 import Contact from "./contact"
 import MainWrapper from "./mainComponent"
-
+import NavBar from "./navigation"
 export default function Home() {
   return ( 
   <>
@@ -10,6 +10,7 @@ export default function Home() {
     <Background />
     <Contact />
   </MainWrapper>
+  <NavBar/>
   </>
   )
 }

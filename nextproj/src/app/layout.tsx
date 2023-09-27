@@ -24,7 +24,6 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
         <StyledComponentsRegistry>
           {children}
           </StyledComponentsRegistry>
-        <NavBar/>
       </BodyStyled>
     </html>
   )
