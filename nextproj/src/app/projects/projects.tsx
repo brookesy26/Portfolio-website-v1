@@ -44,7 +44,6 @@ const StyledLi = styled.li`
 const AnimatedLi = styled(StyledLi)``
 
 const StyledSection = styled.section`
-  border: 0.2rem solid transparent;
   display: flex;
   padding: 1.5rem;
   flex-direction: column;

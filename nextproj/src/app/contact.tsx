@@ -7,6 +7,10 @@ const StyledLi = styled.li`
   display: inline-block;
   padding: 8px 12px 8px 12px;
   border-radius: 10px;
+  text-decoration: none;
+`
+const StyledLink = styled(Link)`
+  text-decoration: none;
   color: #B947FF;
 `
 const StyledUL = styled.ul`
@@ -20,6 +24,7 @@ const StyledUL = styled.ul`
   padding-left: 0;
   margin-block-start: 0;
   margin-block-end: 0;
+  list-style: none;
 `
 const StyledSection = styled.section`
   display: flex;
@@ -27,10 +32,19 @@ const StyledSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  align-self: stretch;
   border-radius: 1.875rem;
   background: #11011B;
   width: auto;
+  box-sizing: border-box;
+  &:hover {
+    ${StyledLink}{
+    color: white;
+    transition: color 1s ease;
+    }
+    ${StyledLi}{
+      transition: scale 1.5s ease;
+    }
+  }
 `
 const StyledH2 = styled.h2`
   color: #D7D7D7;
@@ -40,10 +54,6 @@ const StyledH2 = styled.h2`
   line-height: normal;
   margin-block-start: 0;
   margin-block-end: 0;
-`
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #B947FF;
 `
 
 const Contact = () => {
