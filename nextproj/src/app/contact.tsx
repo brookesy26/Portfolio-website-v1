@@ -1,5 +1,6 @@
 "use client"
 import styled from "styled-components"
+import Link from "next/link"
 
 const StyledLi = styled.li`
   background-color: #2C183C;
@@ -40,14 +41,19 @@ const StyledH2 = styled.h2`
   margin-block-start: 0;
   margin-block-end: 0;
 `
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #B947FF;
+`
+
 const Contact = () => {
   return (
     <StyledSection>
       <StyledH2>Contact</StyledH2>
       <StyledUL>
-        <StyledLi>CV</StyledLi>
-        <StyledLi>GitHub</StyledLi>
-        <StyledLi>Linkedin</StyledLi>
+        <StyledLi><StyledLink href="cv.pdf" target="_blank">CV</StyledLink></StyledLi>
+        <StyledLi><StyledLink href="https://github.com/brookesy26" target="_blank">GitHub</StyledLink></StyledLi>
+        <StyledLi><StyledLink href="https://www.linkedin.com/in/ashley-brookes/" target="_blank">Linkedin</StyledLink></StyledLi>
       </StyledUL>
     </StyledSection>
   )

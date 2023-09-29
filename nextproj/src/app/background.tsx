@@ -12,6 +12,8 @@ const StyledSection = styled.section`
   border-radius: 1.875rem;
   background: #11011B;
   width: fit-content;
+  height: fit-content;
+  position: relative;
 `
 const StyledH2 = styled.h2`
   color: #D7D7D7;
