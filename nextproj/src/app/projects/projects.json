@@ -31,7 +31,7 @@
   },
   {
     "title": "To Do List",
-    "text": "React based Stop Watch, utilising timing functions to track precise time.",
+    "text": "Add, edit, and delete anything you want. A simple react starter project that allows you to keep track of items",
     "features": [
       "Typeable list items",
       "Edit and Delete item",

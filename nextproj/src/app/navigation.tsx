@@ -18,10 +18,18 @@ padding: 0.9rem 3.5rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
+z-index: 999;
 //styleing
 border-radius: 1.875rem;
 border: 1px solid #665CD9;
 background: #0F0F0F;
+@media (min-width: 800px) {
+  position: static;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  transform: translate(0%);
+  justify-self: flex-start;
+}
 `
 
 const AnimatedNav = styled(StyledNav)<PageType>`
@@ -50,7 +58,8 @@ const AnimatedNav = styled(StyledNav)<PageType>`
 `
 const StyledIcon = styled(Icon)<VariantType>`
   color: ${(props) => props.$variant ? '#FF006B ' : '#FFFFFF'};
-  transition: color 0.3s ease;
+  scale: ${(props) => props.$variant ? '1.2' : '1'};
+  transition: all 0.3s ease;
   position: relative;
 `
 type PageType = {
