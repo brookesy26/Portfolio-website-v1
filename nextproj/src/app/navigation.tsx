@@ -28,7 +28,6 @@ background: #0F0F0F;
   grid-column: 2/3;
   grid-row: 2/3;
   transform: translate(0%);
-  justify-self: flex-start;
 }
 `
 
