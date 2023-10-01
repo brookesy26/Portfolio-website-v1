@@ -6,6 +6,15 @@ export const StyledLi = styled.li`
   padding: 8px 12px 8px 12px;
   border-radius: 10px;
   color: #B947FF;
+  cursor: default;
+  &:hover {
+      background-color: #FF006B;
+      transition: all 500ms ease;
+      transform: scale(1.5);
+        color: white;
+        transition: all 500ms ease;
+      }
+  
 `
 export const StyledUL = styled.ul`
   display: flex;

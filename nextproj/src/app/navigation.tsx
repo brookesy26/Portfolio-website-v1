@@ -56,17 +56,23 @@ const AnimatedNav = styled(StyledNav)<PageType>`
 }
 `
 const StyledIcon = styled(Icon)<VariantType>`
+  cursor: pointer;
   color: ${(props) => props.$variant ? '#FF006B ' : '#FFFFFF'};
   scale: ${(props) => props.$variant ? '1.2' : '1'};
   transition: all 0.3s ease;
   position: relative;
+  &:hover{
+    transform: scale(1.2);
+  }
 `
 type PageType = {
   $location: string;
 }
 type VariantType = {
   $variant: Boolean;
+  $hoverText: string;
 }
+
 interface MyComponentProps {
   page: string;
   setPage: (page: string) => void;
@@ -111,9 +117,9 @@ const NavBar = (props : MyComponentProps) => {
   }
   return (
     <AnimatedNav $location={page}>
-        <StyledIcon icon="fluent:apps-24-filled" width="28" height="28" $variant={projectState} onClick={handleProjectClick}/>
-        <StyledIcon icon="fluent:person-24-regular" width="32" height="32"  $variant={homeState} onClick={handleHomeClick}/>
-        <StyledIcon icon="uil:graph-bar" width="28" height="28" name="skills" $variant={skillsState} onClick={handleSkillsClick}/>
+        <StyledIcon icon="fluent:apps-24-filled" width="28" height="28"  $hoverText="Projects" $variant={projectState} onClick={handleProjectClick}/>
+        <StyledIcon icon="fluent:person-24-regular" width="32" height="32" $hoverText="Home" $variant={homeState} onClick={handleHomeClick}/>
+        <StyledIcon icon="uil:graph-bar" width="28" height="28" name="skills"  $hoverText="Skills & Hobbies" $variant={skillsState} onClick={handleSkillsClick}/>
     </AnimatedNav>
   )
 }

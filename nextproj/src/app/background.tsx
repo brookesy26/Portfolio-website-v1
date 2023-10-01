@@ -32,7 +32,8 @@ const StyledText = styled.p`
   font-weight: 400;
 `
 const Sspan = styled.span`
-  color: #634AFF;
+  color: #FF006B;;
+  font-size: 1.1rem;
 `
 
 const Background = () => {
