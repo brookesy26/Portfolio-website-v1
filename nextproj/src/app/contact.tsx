@@ -2,17 +2,28 @@
 import styled from "styled-components"
 import Link from "next/link"
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #B947FF;
+`
 const StyledLi = styled.li`
+  cursor: pointer;
   background-color: #2C183C;
   display: inline-block;
   padding: 8px 12px 8px 12px;
   border-radius: 10px;
   text-decoration: none;
+  &:hover {
+      background-color: #FF006B;
+      transition: all 500ms ease;
+      transform: scale(1.5);
+      ${StyledLink}{
+        color: white;
+        transition: all 500ms ease;
+      }
+    }
 `
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #B947FF;
-`
+
 const StyledUL = styled.ul`
   display: flex;
   align-items: flex-start;
@@ -36,15 +47,6 @@ const StyledSection = styled.section`
   background: #11011B;
   width: auto;
   box-sizing: border-box;
-  &:hover {
-    ${StyledLink}{
-    color: white;
-    transition: color 1s ease;
-    }
-    ${StyledLi}{
-      transition: scale 1.5s ease;
-    }
-  }
 `
 const StyledH2 = styled.h2`
   color: #D7D7D7;
