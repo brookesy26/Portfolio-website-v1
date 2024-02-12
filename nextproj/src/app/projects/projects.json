@@ -1,5 +1,22 @@
 [
   {
+    "title": "Asteroid Shooter Game",
+    "text": "JavaScript Game created using the Phaser 3 framework.",
+    "features": [
+      "Difficulty Modifiers",
+      "Particle Effects",
+      "Touch, Click, and Keyboard Controls",
+      "Achievements, Levels, and Score Tracking"
+    ],
+    "technology": [
+      "HTML 5",
+      "CSS 3",
+      "Phaser 3",
+      "Canvas"
+    ],
+    "URL": "https://creative-dusk-148544.netlify.app/"
+  },
+  {
     "title": "Weather",
     "text": "Displays real time weather information utilising the Restful API provided by openweathermap.org.",
     "features": [
@@ -8,7 +25,7 @@
       "The next 5 days forecast"
     ],
     "technology": [
-      "Html",
+      "HTML 5",
       "Sass",
       "React"
     ],
@@ -23,8 +40,8 @@
       "Tracks minutes, seconds, & milliseconds"
     ],
     "technology": [
-      "Html",
-      "Css",
+      "HTML 5",
+      "CSS 3",
       "React"
     ],
     "URL": "https://cozy-kelpie-770bc9.netlify.app/"
@@ -38,8 +55,8 @@
       "Check off completed items"
     ],
     "technology": [
-      "Html",
-      "Css",
+      "HTML 5",
+      "CSS 3",
       "React"
     ],
     "URL": "https://luminous-cuchufli-17e362.netlify.app/"

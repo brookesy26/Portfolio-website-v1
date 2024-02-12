@@ -5,14 +5,13 @@ export const StyledLi = styled.li`
   display: inline-block;
   padding: 8px 12px 8px 12px;
   border-radius: 10px;
-  color: #B947FF;
+  color: #C05CFF;
   cursor: default;
+  transition: all 500ms ease;
   &:hover {
-      background-color: #FF006B;
-      transition: all 500ms ease;
+      background-color: #E60060;
       transform: scale(1.5);
-        color: white;
-        transition: all 500ms ease;
+      color: white;
       }
   
 `
