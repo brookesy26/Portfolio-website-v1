@@ -1,5 +1,21 @@
 [
   {
+    "title": "Mortgage Calculator Widget",
+    "text": "Mortgage calculator using vanilla javascript designed to be a widget",
+    "features": [
+      "Calculation formula for mortgage",
+      "Displays Breakdown schedule",
+      "Chart generation using chart js"
+    ],
+    "technology": [
+      "HTML 5",
+      "Vanilla JS",
+      "Sass",
+      "Chart JS"
+    ],
+    "URL": "https://main--profound-moonbeam-4acd1a.netlify.app/"
+  },
+  {
     "title": "Asteroid Shooter Game",
     "text": "JavaScript Game created using the Phaser 3 framework.",
     "features": [
@@ -11,8 +27,7 @@
     "technology": [
       "HTML 5",
       "CSS 3",
-      "Phaser 3",
-      "Canvas"
+      "Phaser 3"
     ],
     "URL": "https://creative-dusk-148544.netlify.app/"
   },
